@@ -4,7 +4,7 @@ USE studentDB; -- select student database
 
 -- create table for student record
 CREATE TABLE student_record(
-	Roll INT NOT NULL,              -- roll number integer type
+    Roll INT NOT NULL,              -- roll number integer type
     Name VARCHAR(20),      -- VARCHAR(255) used to store character string but a maximum of the set length specified
     Age INT,
     Email VARCHAR(40),
@@ -14,7 +14,7 @@ CREATE TABLE student_record(
 
 -- create table physics chemistry and math record
 CREATE TABLE PCM_marks(
-	Roll INT NOT NULL, 
+    Roll INT NOT NULL, 
     Physics_Marks INT NOT NULL, 
     Chemistry_Marks INT NOT NULL, 
     Math_Marks INT NOT NULL, 
@@ -25,8 +25,8 @@ CREATE TABLE PCM_marks(
 
 -- create table for sport marks
 CREATE TABLE sport_marks(
-	Roll INT NOT NULL, 
+    Roll INT NOT NULL, 
     Sport_Marks INT NOT NULL,
     PRIMARY KEY(Roll),
-	FOREIGN KEY (Roll) REFERENCES student_record(Roll)
+    FOREIGN KEY (Roll) REFERENCES student_record(Roll)
 );
